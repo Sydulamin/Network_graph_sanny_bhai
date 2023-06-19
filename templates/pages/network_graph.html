@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Network Graph</title>
+</head>
+
+<body>
+    <h1>Network Graph</h1>
+    <div id="network-graph"></div>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        var graphJSON = {{ graphJSON | safe }};
+        Plotly.newPlot('network-graph', graphJSON);
+    </script>
+</body>
+
+</html>

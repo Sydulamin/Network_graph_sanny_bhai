@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ header }}</title>
+</head>
+
+<body>
+    <h1>{{ header }}</h1>
+    <p>{{ description }}</p>
+    <div id="chart"></div>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        var graphJSON = {{ graphJSON| safe }};
+        Plotly.newPlot('chart', graphJSON);
+    </script>
+</body>
+
+</html>
